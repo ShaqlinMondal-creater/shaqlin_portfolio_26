@@ -168,7 +168,7 @@ export function Intro() {
                 {marqueeWords.map((word) => (
                   <span key={`${copy}-${word}`} className="flex items-center">
                     <span className="px-[0.2em]">{word}</span>
-                    <i className="mx-[0.12em] h-[0.12em] w-[0.12em] rounded-full bg-[#7c3aed]/35" />
+                    <i className="mx-[0.12em] h-[0.12em] w-[0.12em] rounded-full bg-accent-hot/35" />
                   </span>
                 ))}
               </span>
@@ -180,7 +180,7 @@ export function Intro() {
           </p>
           <a
             href="#work"
-            className="carousel-copy rm-hide absolute bottom-8 left-1/2 -translate-x-1/2 rounded-full bg-ink px-5 py-3 text-sm font-medium text-white transition hover:bg-[#2a1458]"
+            className="carousel-copy rm-hide absolute bottom-8 left-1/2 -translate-x-1/2 rounded-full bg-ink px-5 py-3 text-sm font-medium text-white transition hover:bg-link-hover"
           >
             See the work
           </a>
@@ -193,7 +193,7 @@ export function Intro() {
           </div>
         </div>
 
-        <div className="hero-panel violet-panel absolute inset-0 z-10 overflow-hidden text-white [clip-path:inset(10px_round_28px)]">
+        <div className="hero-panel accent-panel absolute inset-0 z-10 overflow-hidden text-white [clip-path:inset(10px_round_28px)]">
           <div className="rm-hide absolute inset-0">
             <HeroField />
           </div>
@@ -230,7 +230,7 @@ export function Intro() {
                 </a>
                 <a
                   href="#work"
-                  className="rounded-full bg-white px-5 py-3 text-sm font-medium text-[#1a0b3b] transition hover:bg-lilac"
+                  className="rounded-full bg-white px-5 py-3 text-sm font-medium text-cta-ink transition hover:bg-lilac"
                 >
                   See the work <span aria-hidden>→</span>
                 </a>
@@ -241,7 +241,7 @@ export function Intro() {
               >
                 <span aria-hidden className="flex -space-x-2">
                   {dots.map((background) => (
-                    <span key={background} className="h-6 w-6 rounded-full ring-2 ring-[#3b1580]" style={{ background }} />
+                    <span key={background} className="h-6 w-6 rounded-full ring-2 ring-[var(--live-from)]" style={{ background }} />
                   ))}
                 </span>
                 12 sites live in production
@@ -290,15 +290,9 @@ function LiveCard({ cycle }: { cycle: boolean }) {
   }, [cycle]);
 
   return (
-    <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[22px] border border-white/15 bg-[linear-gradient(165deg,#3b1580_0%,#1f0b4a_55%,#12072c_100%)] p-4 text-white shadow-[0_30px_80px_-20px_rgba(20,0,60,0.6)]">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-16 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(243,232,255,0.9),rgba(167,139,250,0.35)_42%,transparent_70%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-20 -left-12 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(217,70,239,0.55),transparent_65%)]"
-      />
+    <div className="live-card relative flex h-full w-full flex-col overflow-hidden rounded-[22px] border border-white/15 p-4 text-white">
+      <div aria-hidden className="live-glow-a pointer-events-none absolute -top-16 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full" />
+      <div aria-hidden className="live-glow-b pointer-events-none absolute -bottom-20 -left-12 h-64 w-64 rounded-full" />
       <div className="relative flex items-center justify-between">
         <span className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-[11px]">
           <span aria-hidden>✦</span> In production
@@ -324,7 +318,7 @@ function LiveCard({ cycle }: { cycle: boolean }) {
               ▍
             </span>
           </span>
-          <span aria-hidden className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-white text-sm text-[#1a0b3b]">
+          <span aria-hidden className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-white text-sm text-cta-ink">
             ↗
           </span>
         </a>

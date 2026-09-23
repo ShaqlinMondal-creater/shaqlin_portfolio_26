@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 import { profile, socials } from "@/data/portfolio";
+import { theme, themeStyle } from "@/lib/theme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0f",
+  themeColor: theme.ink,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   };
 
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" style={themeStyle} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <body className="font-sans">
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />

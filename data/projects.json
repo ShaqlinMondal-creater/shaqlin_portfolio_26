@@ -1,0 +1,107 @@
+{
+  "howTo": "Add a row under items. type must be a key from categories. Put the screenshot in public/projects and set image to /projects/your-file.webp",
+  "categories": {
+    "ecommerce": { "label": "E-commerce", "hue": "rgba(167,139,250,0.55)" },
+    "woocommerce": { "label": "WooCommerce", "hue": "rgba(251,191,36,0.45)" },
+    "institution": { "label": "Institution portal", "hue": "rgba(52,211,153,0.45)" },
+    "portfolio": { "label": "Company site", "hue": "rgba(96,165,250,0.45)" }
+  },
+  "items": [
+    {
+      "type": "ecommerce",
+      "name": "Liwaas",
+      "description": "Own-brand fashion store with payments, coupons, and admin analytics.",
+      "tags": ["Laravel", "MySQL", "Tailwind", "Razorpay"],
+      "url": "https://liwaas.com",
+      "image": "/projects/liwaas.webp"
+    },
+    {
+      "type": "ecommerce",
+      "name": "Haneri",
+      "description": "Full-stack store with payments, coupons, and admin analytics.",
+      "tags": ["Laravel", "MySQL", "Tailwind", "Razorpay"],
+      "url": "https://haneri.com",
+      "image": "/projects/haneri.webp"
+    },
+    {
+      "type": "ecommerce",
+      "name": "Stockout",
+      "description": "Multi-vendor marketplace.",
+      "tags": ["Laravel", "REST API", "Razorpay"],
+      "url": "https://stockoutindia.com",
+      "image": "/projects/stockout.webp"
+    },
+    {
+      "type": "woocommerce",
+      "name": "Anhussanally",
+      "description": "WooCommerce storefront.",
+      "tags": ["PHP", "WooCommerce", "cPanel"],
+      "url": "https://anhussunally.com",
+      "image": "/projects/anhussanally.webp"
+    },
+    {
+      "type": "woocommerce",
+      "name": "Johar Traders",
+      "description": "WooCommerce storefront.",
+      "tags": ["PHP", "WooCommerce", "cPanel"],
+      "url": "https://johartraders.in",
+      "image": "/projects/johar.webp"
+    },
+    {
+      "type": "woocommerce",
+      "name": "Sakberally",
+      "description": "WooCommerce storefront.",
+      "tags": ["PHP", "WooCommerce", "cPanel"],
+      "url": "https://sakberally.com/",
+      "image": "/projects/sakberally.webp"
+    },
+    {
+      "type": "woocommerce",
+      "name": "Frosty Business",
+      "description": "WooCommerce storefront.",
+      "tags": ["PHP", "WooCommerce", "cPanel"],
+      "url": "https://frostybusiness.com",
+      "image": "/projects/frosty.webp"
+    },
+    {
+      "type": "institution",
+      "name": "Saifee School",
+      "description": "Institution portal with student login, forms, and results.",
+      "tags": ["Laravel", "MySQL", "REST API"],
+      "url": "https://www.saifeeschool.in",
+      "image": "/projects/saifee.webp"
+    },
+    {
+      "type": "portfolio",
+      "name": "Raj Interiors",
+      "description": "Company site with services and contact flows.",
+      "tags": ["Tailwind", "PHP"],
+      "url": "https://rajinteriors.in",
+      "image": "/projects/raj.webp"
+    },
+    {
+      "type": "portfolio",
+      "name": "Safe Technical India",
+      "description": "WordPress company site with services and contact flows.",
+      "tags": ["WordPress"],
+      "url": "https://www.safetechnicalindia.in",
+      "image": "/projects/safetech-india.webp"
+    },
+    {
+      "type": "portfolio",
+      "name": "Safe Technical",
+      "description": "WordPress company site with services and contact flows.",
+      "tags": ["WordPress"],
+      "url": "https://www.safetechnical.in",
+      "image": "/projects/safetech.webp"
+    },
+    {
+      "type": "portfolio",
+      "name": "Fluidtech",
+      "description": "WordPress company site with services and contact flows.",
+      "tags": ["WordPress"],
+      "url": "https://fluidtech.co",
+      "image": "/projects/fluidtech.webp"
+    }
+  ]
+}

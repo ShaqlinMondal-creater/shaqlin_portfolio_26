@@ -20,7 +20,7 @@ export function Nav() {
         <a
           href="#top"
           aria-label="Shaqlin Mondal, back to top"
-          className="grid h-9 w-9 place-items-center rounded-full bg-[conic-gradient(from_140deg,#c4b5fd,#7c3aed,#f0abfc,#c4b5fd)] text-sm font-bold text-[#1a0b3b]"
+          className="nav-mark grid h-9 w-9 place-items-center rounded-full text-sm font-bold"
         >
           S
         </a>

@@ -80,7 +80,7 @@ export function Experience() {
 
         <div className="timeline relative pl-8 md:pl-10">
           <span aria-hidden className="absolute top-3 bottom-3 left-[7px] w-px bg-white/10">
-            <i className="timeline-fill block h-full w-full origin-top bg-gradient-to-b from-lilac to-[#7c3aed]" />
+            <i className="timeline-fill block h-full w-full origin-top bg-gradient-to-b from-lilac to-accent-hot" />
           </span>
           <ol className="space-y-6">
             {roles.map((role) => (

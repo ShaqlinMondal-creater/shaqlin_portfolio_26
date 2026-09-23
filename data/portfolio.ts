@@ -1,3 +1,5 @@
+import projectFile from "./projects.json";
+
 export const profile = {
   name: "Shaqlin Mondal",
   role: "Full Stack Developer",
@@ -221,125 +223,22 @@ export const skillGroups = [
   },
 ] as const;
 
-export const categoryLabels = {
-  ecommerce: "E-commerce",
-  woocommerce: "WooCommerce",
-  institution: "Institution portal",
-  portfolio: "Company site",
-} as const;
+export const categoryLabels = Object.fromEntries(
+  Object.entries(projectFile.categories).map(([key, value]) => [key, value.label]),
+) as { [K in keyof typeof projectFile.categories]: string };
 
-export const categoryHues = {
-  ecommerce: "rgba(167,139,250,0.55)",
-  woocommerce: "rgba(251,191,36,0.45)",
-  institution: "rgba(52,211,153,0.45)",
-  portfolio: "rgba(96,165,250,0.45)",
-} as const;
+export const categoryHues = Object.fromEntries(
+  Object.entries(projectFile.categories).map(([key, value]) => [key, value.hue]),
+) as { [K in keyof typeof projectFile.categories]: string };
 
-export const projects: {
-  type: keyof typeof categoryLabels;
-  name: string;
-  description: string;
-  tags: string[];
-  url: string;
-  image: string;
-}[] = [
-  {
-    type: "ecommerce",
-    name: "Liwaas",
-    description: "Own-brand fashion store with payments, coupons, and admin analytics.",
-    tags: ["Laravel", "MySQL", "Tailwind", "Razorpay"],
-    url: "https://liwaas.com",
-    image: "/projects/liwaas.webp",
-  },
-  {
-    type: "ecommerce",
-    name: "Haneri",
-    description: "Full-stack store with payments, coupons, and admin analytics.",
-    tags: ["Laravel", "MySQL", "Tailwind", "Razorpay"],
-    url: "https://haneri.com",
-    image: "/projects/haneri.webp",
-  },
-  {
-    type: "ecommerce",
-    name: "Stockout",
-    description: "Multi-vendor marketplace.",
-    tags: ["Laravel", "REST API", "Razorpay"],
-    url: "https://stockoutindia.com",
-    image: "/projects/stockout.webp",
-  },
-  {
-    type: "woocommerce",
-    name: "Anhussanally",
-    description: "WooCommerce storefront.",
-    tags: ["PHP", "WooCommerce", "cPanel"],
-    url: "https://anhussunally.com",
-    image: "/projects/anhussanally.webp",
-  },
-  {
-    type: "woocommerce",
-    name: "Johar Traders",
-    description: "WooCommerce storefront.",
-    tags: ["PHP", "WooCommerce", "cPanel"],
-    url: "https://johartraders.in",
-    image: "/projects/johar.webp",
-  },
-  {
-    type: "woocommerce",
-    name: "Sakberally",
-    description: "WooCommerce storefront.",
-    tags: ["PHP", "WooCommerce", "cPanel"],
-    url: "https://sakberally.com/",
-    image: "/projects/sakberally.webp",
-  },
-  {
-    type: "woocommerce",
-    name: "Frosty Business",
-    description: "WooCommerce storefront.",
-    tags: ["PHP", "WooCommerce", "cPanel"],
-    url: "https://frostybusiness.com",
-    image: "/projects/frosty.webp",
-  },
-  {
-    type: "institution",
-    name: "Saifee School",
-    description: "Institution portal with student login, forms, and results.",
-    tags: ["Laravel", "MySQL", "REST API"],
-    url: "https://www.saifeeschool.in",
-    image: "/projects/saifee.webp",
-  },
-  {
-    type: "portfolio",
-    name: "Raj Interiors",
-    description: "Company site with services and contact flows.",
-    tags: ["Tailwind", "PHP"],
-    url: "https://rajinteriors.in",
-    image: "/projects/raj.webp",
-  },
-  {
-    type: "portfolio",
-    name: "Safe Technical India",
-    description: "WordPress company site with services and contact flows.",
-    tags: ["WordPress"],
-    url: "https://www.safetechnicalindia.in",
-    image: "/projects/safetech-india.webp",
-  },
-  {
-    type: "portfolio",
-    name: "Safe Technical",
-    description: "WordPress company site with services and contact flows.",
-    tags: ["WordPress"],
-    url: "https://www.safetechnical.in",
-    image: "/projects/safetech.webp",
-  },
-  {
-    type: "portfolio",
-    name: "Fluidtech",
-    description: "WordPress company site with services and contact flows.",
-    tags: ["WordPress"],
-    url: "https://fluidtech.co",
-    image: "/projects/fluidtech.webp",
-  },
-];
+export type ProjectType = keyof typeof projectFile.categories;
+
+export const projects = projectFile.items.map((project) => {
+  if (!(project.type in projectFile.categories)) {
+    throw new Error(`data/projects.json: "${project.name}" uses unknown type "${project.type}". Add it under categories first.`);
+  }
+  return project as typeof project & { type: ProjectType };
+});
 
 export function domainOf(url: string) {
   return url.replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/$/, "");

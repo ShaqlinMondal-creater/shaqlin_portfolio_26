@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, Vector2, WebGLRenderer } from "three";
+import { Color, Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, Vector2, WebGLRenderer } from "three";
+import { hexToRgb01, theme } from "@/lib/theme";
 
 const vertexShader = /* glsl */ `
   varying vec2 vUv;
@@ -16,6 +17,9 @@ const fragmentShader = /* glsl */ `
   uniform float uTime;
   uniform vec2 uRes;
   uniform vec2 uMouse;
+  uniform vec3 uDeep;
+  uniform vec3 uMid;
+  uniform vec3 uHigh;
   varying vec2 vUv;
 
   float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
@@ -47,9 +51,9 @@ const fragmentShader = /* glsl */ `
     vec2 warp = vec2(fbm(p * 1.4 + vec2(t, -t * 0.7)), fbm(p * 1.4 - vec2(t * 0.8, t)));
     float n = fbm(p * 1.8 + warp * 1.6);
 
-    vec3 deep = vec3(0.07, 0.02, 0.2);
-    vec3 mid = vec3(0.3, 0.09, 0.68);
-    vec3 high = vec3(0.6, 0.34, 0.98);
+    vec3 deep = uDeep;
+    vec3 mid = uMid;
+    vec3 high = uHigh;
 
     vec3 col = mix(deep, mid, smoothstep(0.15, 0.95, uv.y * 0.55 + n * 0.75));
     col = mix(col, high, smoothstep(0.62, 0.95, n) * 0.35);
@@ -91,6 +95,9 @@ export default function HeroField() {
       uTime: { value: 0 },
       uRes: { value: new Vector2(1, 1) },
       uMouse: { value: new Vector2(0.72, 0.42) },
+      uDeep: { value: new Color(...hexToRgb01(theme.fieldDeep)) },
+      uMid: { value: new Color(...hexToRgb01(theme.fieldMid)) },
+      uHigh: { value: new Color(...hexToRgb01(theme.fieldHigh)) },
     };
     const material = new ShaderMaterial({ uniforms, vertexShader, fragmentShader, depthTest: false });
     const geometry = new PlaneGeometry(2, 2);

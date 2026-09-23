@@ -1,0 +1,32 @@
+{
+  "howTo": "Copy the violet object, rename the key (e.g. lime), change the hex values, then set active to that key. Restart or refresh after saving.",
+  "active": "violet",
+  "themes": {
+    "violet": {
+      "ink": "#0a0a0f",
+      "paper": "#f4f4f7",
+      "foreground": "#f5f3ff",
+      "accent": "#6d28d9",
+      "accentMid": "#4c1d95",
+      "accentDeep": "#1e0b4b",
+      "lilac": "#c4b5fd",
+      "hot": "#7c3aed",
+      "glow": "#f0abfc",
+      "live": "#bef264",
+      "ctaInk": "#1a0b3b",
+      "heroLift": "rgba(233, 213, 255, 0.5)",
+      "heroWash": "rgba(139, 92, 246, 0.55)",
+      "navTint": "#160c30",
+      "orbMid": "#1b1036",
+      "liveFrom": "#3b1580",
+      "liveVia": "#1f0b4a",
+      "liveTo": "#12072c",
+      "linkHover": "#2a1458",
+      "shot": "#14141b",
+      "fieldDeep": "#120533",
+      "fieldMid": "#4d17ad",
+      "fieldHigh": "#9957fa",
+      "chrome": "#f4f1ff"
+    }
+  }
+}

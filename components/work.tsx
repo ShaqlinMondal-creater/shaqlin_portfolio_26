@@ -84,13 +84,13 @@ export function Work() {
                 href={profile.github}
                 target="_blank"
                 rel="noreferrer"
-                className="violet-panel flex h-full min-h-72 flex-col justify-between rounded-3xl p-7 transition hover:brightness-110"
+                className="accent-panel flex h-full min-h-72 flex-col justify-between rounded-3xl p-7 transition hover:brightness-110"
               >
                 <p className="eyebrow text-white/70">Archive</p>
                 <div>
                   <p className="text-3xl leading-[1.05] font-semibold tracking-[-0.03em]">More code on GitHub</p>
                   <p className="mt-3 text-sm leading-relaxed text-white/70">Side projects, experiments, and practice repos.</p>
-                  <span className="mt-6 inline-flex rounded-full bg-white px-4 py-2 text-sm font-medium text-[#1a0b3b]">
+                  <span className="mt-6 inline-flex rounded-full bg-white px-4 py-2 text-sm font-medium text-cta-ink">
                     Open GitHub <span aria-hidden>&nbsp;↗</span>
                   </span>
                 </div>
@@ -117,7 +117,7 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
           {categoryLabels[project.type]}
         </span>
       </div>
-      <div className="relative mt-3 aspect-[16/7] overflow-hidden rounded-2xl border border-white/10 bg-[#14141b] transition duration-500 group-hover:-translate-y-1 group-hover:border-white/30">
+      <div className="relative mt-3 aspect-[16/7] overflow-hidden rounded-2xl border border-white/10 bg-shot transition duration-500 group-hover:-translate-y-1 group-hover:border-white/30">
         <Image
           src={project.image}
           alt={`${project.name} homepage`}

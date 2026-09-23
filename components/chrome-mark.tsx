@@ -24,6 +24,7 @@ import {
   WebGLRenderer,
   type BufferGeometry,
 } from "three";
+import { theme } from "@/lib/theme";
 
 const RADIUS = 0.19;
 
@@ -122,7 +123,7 @@ export default function ChromeMark() {
     scene.environment = envTarget.texture;
 
     const chrome = new MeshPhysicalMaterial({
-      color: 0xf4f1ff,
+      color: new Color(theme.chrome),
       metalness: 1,
       roughness: 0.13,
       clearcoat: 1,

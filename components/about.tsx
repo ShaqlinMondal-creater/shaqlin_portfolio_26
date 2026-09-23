@@ -55,7 +55,7 @@ export function About() {
         <div className="mx-auto w-full max-w-sm md:max-w-none">
           <div
             ref={card}
-            className="overflow-hidden rounded-[28px] border border-white/10 bg-[#15151c] shadow-[0_40px_90px_-30px_rgba(124,58,237,0.5)]"
+            className="portrait-frame overflow-hidden rounded-[28px] border border-white/10 bg-shot"
           >
             <Image
               src="/portrait.jpg"

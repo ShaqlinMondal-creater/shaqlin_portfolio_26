@@ -27,7 +27,7 @@ export function Contact() {
 
   return (
     <section id="contact" ref={root} aria-labelledby="contact-title" className="bg-ink px-2.5 pb-2.5">
-      <div className="violet-panel relative overflow-hidden rounded-[28px] px-6 py-24 text-white md:px-12 md:py-28">
+      <div className="accent-panel relative overflow-hidden rounded-[28px] px-6 py-24 text-white md:px-12 md:py-28">
         <div className="mx-auto grid max-w-[1280px] items-center gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
           <div>
             <p className="eyebrow text-white/70">Contact</p>
@@ -44,7 +44,7 @@ export function Contact() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={`mailto:${profile.email}`}
-                className="rounded-full bg-white px-5 py-3 text-sm font-medium text-[#1a0b3b] transition hover:bg-lilac"
+                className="rounded-full bg-white px-5 py-3 text-sm font-medium text-cta-ink transition hover:bg-lilac"
               >
                 Email me <span aria-hidden>→</span>
               </a>
@@ -82,7 +82,7 @@ export function Contact() {
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm text-white/85 transition hover:bg-white hover:text-[#1a0b3b]"
+                    className="inline-flex rounded-full border border-white/20 px-4 py-2 text-sm text-white/85 transition hover:bg-white hover:text-cta-ink"
                   >
                     {social.label}
                   </a>

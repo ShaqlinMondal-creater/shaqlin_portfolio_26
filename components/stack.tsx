@@ -116,9 +116,9 @@ export function Stack() {
             <div className="relative">
               <div
                 aria-hidden
-                className="absolute -inset-x-[22%] -inset-y-[55%] -z-10 bg-[radial-gradient(closest-side,rgba(244,244,247,0.98)_60%,rgba(244,244,247,0))]"
+                className="paper-halo absolute -inset-x-[22%] -inset-y-[55%] -z-10"
               />
-              <p className="eyebrow text-[#6d28d9]">Stack</p>
+              <p className="eyebrow text-accent">Stack</p>
               <h2
                 id="stack-title"
                 className="mx-auto mt-4 max-w-4xl text-[clamp(2.4rem,6vw,5.6rem)] leading-[0.98] font-semibold tracking-[-0.045em]"
