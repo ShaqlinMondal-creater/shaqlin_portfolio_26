@@ -59,11 +59,11 @@ export function Work() {
               id="work-title"
               className="mt-4 text-[clamp(2.2rem,4.6vw,4.2rem)] leading-[1] font-semibold tracking-[-0.04em]"
             >
-              Twelve sites <span className="text-white/40">built.</span>
+              Selected <span className="text-white/40">work.</span>
             </h2>
           </div>
           <p className="hidden max-w-[17rem] text-sm leading-relaxed text-white/55 md:block">
-            Stores, portals, and company sites for businesses across India.
+            Stores, portals, company sites, and SaaS products for businesses across India. Some projects are private.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export function Work() {
           <ol className="work-track grid gap-14 px-6 md:flex md:w-max md:items-start md:gap-10 md:px-[max(3rem,calc((100%_-_1280px)/2_+_3rem))]">
             {projects.map((project, index) => (
               <li
-                key={project.url}
+                key={project.name}
                 className={
                   index % 2 ? "md:mt-[7vh] md:w-[min(27rem,46vh)] md:shrink-0" : "md:w-[min(34rem,58vh)] md:shrink-0"
                 }
@@ -109,6 +109,10 @@ export function Work() {
 
 function WorkCard({ project, index }: { project: Project; index: number }) {
   const offline = "offline" in project && project.offline === true;
+  const isPrivate = "private" in project && project.private === true;
+  const locked = offline || isPrivate;
+  const href = "url" in project ? project.url : undefined;
+  const image = "image" in project ? project.image : undefined;
   const body = (
     <>
       <div className="flex items-center justify-between gap-4 font-mono text-[11px] tracking-[0.14em] text-white/45 uppercase">
@@ -120,24 +124,30 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
       </div>
       <div
         className={`relative mt-3 aspect-[16/7] overflow-hidden rounded-2xl border border-white/10 bg-shot ${
-          offline ? "" : "transition duration-500 group-hover:-translate-y-1 group-hover:border-white/30"
+          locked ? "" : "transition duration-500 group-hover:-translate-y-1 group-hover:border-white/30"
         }`}
       >
-        <Image
-          src={project.image}
-          alt={`${project.name} homepage`}
-          fill
-          sizes="(min-width: 768px) 544px, 100vw"
-          className="object-cover object-top"
-        />
+        {image ? (
+          <Image
+            src={image}
+            alt={`${project.name} homepage`}
+            fill
+            sizes="(min-width: 768px) 544px, 100vw"
+            className="object-cover object-top"
+          />
+        ) : null}
       </div>
       <div className="mt-4 flex items-start justify-between gap-4">
         <div className="min-w-0">
           <h3 className="text-xl font-semibold tracking-[-0.02em] md:text-2xl">{project.name}</h3>
-          <p className="mt-1 font-mono text-xs text-white/45">{domainOf(project.url)}</p>
+          {href ? <p className="mt-1 font-mono text-xs text-white/45">{domainOf(href)}</p> : null}
         </div>
         {offline ? (
           <span className="shrink-0 rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/80">Offline</span>
+        ) : isPrivate ? (
+          <span className="shrink-0 rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/80">
+            Private project
+          </span>
         ) : (
           <span className="shrink-0 rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/80 transition group-hover:bg-white group-hover:text-ink">
             Visit <span aria-hidden>↗</span>
@@ -155,12 +165,12 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
     </>
   );
 
-  if (offline) {
+  if (locked || !href) {
     return <div className="block">{body}</div>;
   }
 
   return (
-    <a href={project.url} target="_blank" rel="noreferrer" className="group block">
+    <a href={href} target="_blank" rel="noreferrer" className="group block">
       {body}
     </a>
   );

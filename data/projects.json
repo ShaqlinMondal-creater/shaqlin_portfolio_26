@@ -4,22 +4,24 @@
     "ecommerce": { "label": "E-commerce", "hue": "rgba(167,139,250,0.55)" },
     "woocommerce": { "label": "WooCommerce", "hue": "rgba(251,191,36,0.45)" },
     "institution": { "label": "Institution portal", "hue": "rgba(52,211,153,0.45)" },
-    "portfolio": { "label": "Company site", "hue": "rgba(96,165,250,0.45)" }
+    "portfolio": { "label": "Company site", "hue": "rgba(96,165,250,0.45)" },
+    "saas": { "label": "SaaS", "hue": "rgba(129,140,248,0.55)" },
+    "private": { "label": "Private", "hue": "rgba(244,114,182,0.45)" }
   },
   "items": [
     {
       "type": "ecommerce",
       "name": "Liwaas",
-      "description": "Own-brand fashion store with payments, coupons, and admin analytics.",
-      "tags": ["Laravel", "MySQL", "Tailwind", "Razorpay"],
+      "description": "Personal project: fashion e-commerce platform with Razorpay, shipping integration, and an admin panel for site configuration.",
+      "tags": ["Laravel", "React", "MySQL", "Razorpay"],
       "url": "https://liwaas.com",
       "image": "/projects/liwaas.webp"
     },
     {
       "type": "ecommerce",
       "name": "Haneri",
-      "description": "Full-stack store with payments, coupons, and admin analytics.",
-      "tags": ["Laravel", "MySQL", "Tailwind", "Razorpay"],
+      "description": "E-commerce store built in Laravel. Backend setup and part of the frontend.",
+      "tags": ["Laravel", "MySQL"],
       "url": "https://haneri.com",
       "image": "/projects/haneri.webp"
     },
@@ -34,16 +36,16 @@
     {
       "type": "woocommerce",
       "name": "Anhussanally",
-      "description": "WooCommerce storefront.",
-      "tags": ["PHP", "WooCommerce", "cPanel"],
+      "description": "Product catalogue website for a business.",
+      "tags": ["PHP"],
       "url": "https://anhussunally.com",
       "image": "/projects/anhussanally.webp"
     },
     {
       "type": "woocommerce",
       "name": "Johar Traders",
-      "description": "WooCommerce storefront.",
-      "tags": ["PHP", "WooCommerce", "cPanel"],
+      "description": "Product catalogue website for a business.",
+      "tags": ["PHP"],
       "url": "https://johartraders.in",
       "image": "/projects/johar.webp",
       "offline": true
@@ -51,8 +53,8 @@
     {
       "type": "woocommerce",
       "name": "Sakberally",
-      "description": "WooCommerce storefront.",
-      "tags": ["PHP", "WooCommerce", "cPanel"],
+      "description": "Product catalogue website for a business.",
+      "tags": ["PHP"],
       "url": "https://sakberally.com/",
       "image": "/projects/sakberally.webp",
       "offline": true
@@ -60,16 +62,16 @@
     {
       "type": "woocommerce",
       "name": "Frosty Business",
-      "description": "WooCommerce storefront.",
-      "tags": ["PHP", "WooCommerce", "cPanel"],
+      "description": "Product catalogue website for a business.",
+      "tags": ["PHP"],
       "url": "https://frostybusiness.com",
       "image": "/projects/frosty.webp"
     },
     {
       "type": "institution",
       "name": "Saifee School",
-      "description": "Institution portal with student login, forms, and results.",
-      "tags": ["Laravel", "MySQL", "REST API"],
+      "description": "Institution portal with an admin panel, student profiles, report cards, admit cards, payment setup, and a public admission process.",
+      "tags": ["Laravel", "MySQL"],
       "url": "https://www.saifeeschool.in",
       "image": "/projects/saifee.webp"
     },
@@ -106,6 +108,76 @@
       "tags": ["WordPress"],
       "url": "https://fluidtech.co",
       "image": "/projects/fluidtech.webp"
+    },
+    {
+      "type": "woocommerce",
+      "name": "Alamdar International",
+      "description": "Product catalogue website for a business.",
+      "tags": ["PHP"],
+      "url": "https://alamdarinternational.com",
+      "image": "/projects/alamdar.webp"
+    },
+    {
+      "type": "woocommerce",
+      "name": "Supersteel",
+      "description": "Product catalogue website for a power tools brand.",
+      "tags": ["PHP"],
+      "url": "https://supersteel.in",
+      "image": "/projects/supersteel.webp"
+    },
+    {
+      "type": "portfolio",
+      "name": "Taraktube",
+      "description": "Company website.",
+      "tags": ["PHP"],
+      "url": "https://taraktubeco.com",
+      "image": "/projects/taraktube.webp"
+    },
+    {
+      "type": "portfolio",
+      "name": "Topgrip",
+      "description": "Company website with services and contact pages.",
+      "tags": ["PHP"],
+      "url": "https://topgrip.co.in",
+      "image": "/projects/topgrip.webp"
+    },
+    {
+      "type": "portfolio",
+      "name": "TBL Industrial",
+      "description": "Company website with services and contact pages.",
+      "tags": ["PHP"],
+      "url": "https://tblindustrial.com",
+      "image": "/projects/tbl.webp"
+    },
+    {
+      "type": "saas",
+      "name": "Smart Quote",
+      "description": "Personal SaaS: quotation management with admin and seller panels, subscription-based access, and Razorpay. Each seller manages their own products, customers, and quotations.",
+      "tags": ["React", "Laravel", "MySQL", "Razorpay"],
+      "url": "https://smartquote-pi.vercel.app",
+      "image": "/projects/smartquote.webp"
+    },
+    {
+      "type": "saas",
+      "name": "BhuriBhoj",
+      "description": "Personal SaaS: mess management with admin, president, manager, and member panels, and a subscription for each mess.",
+      "tags": ["React", "Laravel", "MySQL", "Razorpay"],
+      "url": "https://bhuribhoj-v1.vercel.app",
+      "image": "/projects/bhuribhoj.webp"
+    },
+    {
+      "type": "private",
+      "name": "Business admin panels",
+      "description": "Admin panels for quotation, sales order, and sales invoice generation for businesses.",
+      "tags": ["React", "Laravel", "MySQL"],
+      "private": true
+    },
+    {
+      "type": "private",
+      "name": "Northline",
+      "description": "Personal task management system.",
+      "tags": ["React", "Node", "Express", "MongoDB"],
+      "private": true
     }
   ]
 }

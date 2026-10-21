@@ -99,7 +99,7 @@ export const capabilities = [
 export const marqueeWords = ["Laravel", "PHP", "MySQL", "Tailwind CSS", "WooCommerce", "REST APIs", "Razorpay"];
 
 export const stats = [
-  { value: 12, decimals: 0, suffix: "", label: "Sites built" },
+  { value: 25, decimals: 0, suffix: "+", label: "Projects built" },
   { value: 2.5, decimals: 1, suffix: "+", label: "Years shipping" },
   { value: 3, decimals: 0, suffix: "", label: "Companies" },
 ];

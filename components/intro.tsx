@@ -244,7 +244,7 @@ export function Intro() {
                     <span key={background} className="h-6 w-6 rounded-full ring-2 ring-[var(--live-from)]" style={{ background }} />
                   ))}
                 </span>
-                12 sites built
+                25+ projects built
               </p>
             </div>
             <div className="hero-aside flex flex-col items-end gap-5 max-md:absolute max-md:inset-x-0 max-md:bottom-[calc(var(--card-h)*-1.1)] max-md:items-center">
@@ -336,7 +336,7 @@ function LiveCard({ cycle }: { cycle: boolean }) {
             </span>
           ))}
         </div>
-        <p className="mt-4 text-[15px] font-semibold">12 sites built</p>
+        <p className="mt-4 text-[15px] font-semibold">25+ projects built</p>
         <p className="mt-1 text-xs text-white/60">
           {site.name} · {site.stack}
         </p>
