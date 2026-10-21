@@ -38,7 +38,7 @@ export function Contact() {
               Let’s build <span className="block text-white/50">what ships next.</span>
             </h2>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/75">
-              A new product, a store that needs a real backend, or a team looking for a PHP full stack developer. I read
+              A new product, a store that needs a real backend, or a team looking for a PHP Laravel Developer. I read
               everything.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">

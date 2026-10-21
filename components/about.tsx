@@ -87,7 +87,7 @@ export function About() {
           </p>
           <p className="mt-4 max-w-2xl leading-relaxed text-white/60">
             Day to day that is Laravel and PHP, MySQL, REST APIs, Tailwind interfaces, and WooCommerce stores with
-            payments wired in. I work at Dotcom Solutions in Kolkata as a mid-senior PHP full stack developer.
+            payments wired in. I work at Dotcom Solutions in Kolkata as a PHP Laravel Developer.
           </p>
 
           <h3 className="eyebrow mt-14 text-white/45">Education</h3>

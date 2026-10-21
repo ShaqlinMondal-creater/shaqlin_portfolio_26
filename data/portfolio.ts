@@ -2,8 +2,8 @@ import projectFile from "./projects.json";
 
 export const profile = {
   name: "Shaqlin Mondal",
-  role: "Full Stack Developer",
-  level: "Mid-senior PHP full stack developer",
+  role: "PHP Laravel Developer",
+  level: "PHP Laravel Developer",
   location: "Kolkata, West Bengal",
   email: "shaqlinmondal8905@gmail.com",
   phone: "+91 8597148785",

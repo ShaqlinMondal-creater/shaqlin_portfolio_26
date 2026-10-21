@@ -210,7 +210,7 @@ export function Intro() {
                 style={{ "--i": 1 } as CSSProperties}
               >
                 <span className="block">Shaqlin Mondal</span>
-                <span className="block text-white/45">Full stack developer</span>
+                <span className="block text-white/45">PHP Laravel Developer</span>
               </h1>
               <p
                 className="hero-line mt-6 max-w-md text-[15px] leading-relaxed text-white/75 md:text-base"
