@@ -86,8 +86,8 @@ export function About() {
             does not flatten out.
           </p>
           <p className="mt-4 max-w-2xl leading-relaxed text-white/60">
-            Day to day that is Laravel and PHP, MySQL, REST APIs, Tailwind interfaces, and WooCommerce stores with
-            payments wired in. I work at Dotcom Solutions in Kolkata as a PHP Laravel Developer.
+            Day to day that is Laravel and PHP, React, MySQL, REST APIs, admin panels, and SaaS products with
+            subscription payments. I work at Dotcom Solutions in Kolkata as a PHP Developer.
           </p>
 
           <h3 className="eyebrow mt-14 text-white/45">Education</h3>
@@ -96,7 +96,15 @@ export function About() {
               <li key={item.title} className="grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:gap-8">
                 <div>
                   <p className="font-medium">{item.title}</p>
-                  <p className="mt-1 text-sm text-white/55">{item.school}</p>
+                  <p className="mt-1 text-sm text-white/55">
+                    {item.school}
+                    {"note" in item && item.note ? (
+                      <>
+                        <br />
+                        {item.note}
+                      </>
+                    ) : null}
+                  </p>
                 </div>
                 <p className="font-mono text-xs text-white/45 sm:pt-1">{item.dates}</p>
               </li>

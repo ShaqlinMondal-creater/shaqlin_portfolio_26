@@ -9,7 +9,7 @@ import { setNavTheme, watchNavTheme } from "@/lib/nav-theme";
 gsap.registerPlugin(ScrollTrigger);
 
 const copy =
-  "Laravel or WordPress on top, MySQL underneath, payments wired in, and hosting on cPanel. I build it, ship it, and look after it.";
+  "Laravel and React on top, MySQL underneath, payments wired in, and hosting on cPanel. I build it, ship it, and look after it.";
 
 function Words() {
   return (

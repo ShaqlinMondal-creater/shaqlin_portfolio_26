@@ -23,10 +23,12 @@ export const socials = [
 
 export const liveSites = [
   { name: "Liwaas", domain: "liwaas.com", url: "https://liwaas.com", stack: "Laravel · Razorpay" },
+  { name: "Saifee School", domain: "saifeeschool.in", url: "https://www.saifeeschool.in", stack: "Laravel · MySQL" },
   { name: "Haneri", domain: "haneri.com", url: "https://haneri.com", stack: "Laravel · Razorpay" },
   { name: "Stockout", domain: "stockoutindia.com", url: "https://stockoutindia.com", stack: "Laravel · REST API" },
-  { name: "Saifee School", domain: "saifeeschool.in", url: "https://www.saifeeschool.in", stack: "Laravel · MySQL" },
-  { name: "Raj Interiors", domain: "rajinteriors.in", url: "https://rajinteriors.in", stack: "PHP · Tailwind" },
+  { name: "Smart Quote", domain: "smartquote-pi.vercel.app", url: "https://smartquote-pi.vercel.app", stack: "React · Laravel" },
+  { name: "TBL Industrial", domain: "tblindustrial.com", url: "https://tblindustrial.com", stack: "PHP" },
+  { name: "Safe Technical India", domain: "safetechnicalindia.in", url: "https://www.safetechnicalindia.in", stack: "WordPress" },
 ];
 
 export const capabilities = [
@@ -96,12 +98,12 @@ export const capabilities = [
   },
 ] as const;
 
-export const marqueeWords = ["Laravel", "PHP", "MySQL", "Tailwind CSS", "WooCommerce", "REST APIs", "Razorpay"];
+export const marqueeWords = ["Laravel", "PHP", "MySQL", "Tailwind CSS", "React", "REST APIs", "Razorpay"];
 
 export const stats = [
   { value: 25, decimals: 0, suffix: "+", label: "Projects built" },
   { value: 2.5, decimals: 1, suffix: "+", label: "Years shipping" },
-  { value: 3, decimals: 0, suffix: "", label: "Companies" },
+  { value: 4, decimals: 0, suffix: "", label: "Companies" },
 ];
 
 export const roles = [
@@ -117,14 +119,15 @@ export const roles = [
       "Designing MySQL schemas and keeping queries fast.",
       "Laying out responsive interfaces with Tailwind CSS.",
       "Maintaining Core PHP and Laravel sites already in production.",
-      "Shipping WooCommerce and Laravel stores with payments and product management.",
+      "Building Laravel e-commerce stores with Razorpay payments and product management.",
+      "Building admin panels for quotation, sales order, and sales invoice generation with Laravel, React, and MySQL.",
       "Moving data between Excel, CSV, and the database.",
       "Keeping PHP secure, readable, and fast.",
     ],
   },
   {
     title: "Industrial Internship · PHP & WordPress",
-    company: "Euphoria Genx",
+    company: "Euphoria GenX",
     place: "Kolkata",
     dates: "September 2023 — April 2024",
     current: false,
@@ -133,6 +136,17 @@ export const roles = [
       "Customized WordPress themes and worked with plugins.",
       "Ran MySQL CRUD through PHP and WordPress.",
       "Connected HTML forms to PHP on small projects.",
+    ],
+  },
+  {
+    title: "Intern · Back End Developer",
+    company: "The Bengal Studio",
+    place: "Kolkata",
+    dates: "August 2023 — October 2023",
+    current: false,
+    points: [
+      "Worked as a PHP backend developer intern on a real project.",
+      "Used PHP and MySQL and managed databases with phpMyAdmin.",
     ],
   },
   {
@@ -168,6 +182,7 @@ export const education = [
     title: "B.Tech, Electronics & Communication Engineering",
     school: "Maulana Abul Kalam Azad University of Technology, GMIT, Kolkata",
     dates: "2019 — 2023",
+    note: "CGPA 8.48",
   },
   {
     title: "Higher Secondary",
@@ -188,6 +203,7 @@ export const skillGroups = [
     items: [
       ["PHP", "Strong"],
       ["JavaScript", "Good"],
+      ["TypeScript", "Intermediate"],
       ["HTML / CSS", "Strong"],
       ["MySQL", "Strong"],
       ["C# / Java", "Basic"],
@@ -198,10 +214,12 @@ export const skillGroups = [
     hue: "#60a5fa",
     items: [
       ["Laravel", "Strong"],
-      ["Tailwind CSS", "Strong"],
-      ["WordPress / WooCommerce", "Good"],
+      ["React", "Good"],
+      ["Next.js", "Intermediate"],
+      ["Tailwind CSS", "Good"],
       ["Node.js / Express", "Intermediate"],
-      ["React", "Basic"],
+      ["WordPress / WooCommerce", "Basic"],
+      ["Admin panels and SaaS", "Good"],
     ],
   },
   {
@@ -209,7 +227,7 @@ export const skillGroups = [
     hue: "#34d399",
     items: [
       ["MySQL / MariaDB", "Strong"],
-      ["phpMyAdmin", "Strong"],
+      ["phpMyAdmin", "Good"],
       ["SQLite", "Good"],
       ["MongoDB", "Basic"],
     ],
@@ -218,13 +236,16 @@ export const skillGroups = [
     title: "Tools",
     hue: "#fbbf24",
     items: [
-      ["Git / GitHub", "Strong"],
-      ["Composer", "Strong"],
-      ["Postman", "Strong"],
-      ["cPanel / Plesk", "Strong"],
       ["REST APIs", "Strong"],
-      ["Excel / CSV import–export", "Strong"],
+      ["Git / GitHub", "Good"],
+      ["Composer", "Good"],
+      ["Postman", "Good"],
+      ["cPanel / Plesk", "Good"],
+      ["Excel / CSV import–export", "Good"],
       ["Payment gateways", "Good"],
+      ["Razorpay", "Good"],
+      ["Shiprocket", "Intermediate"],
+      ["DomPDF", "Intermediate"],
       ["Google Sheets / Apps Script", "Good"],
       ["Apache", "Good"],
     ],

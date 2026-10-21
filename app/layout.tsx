@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Shaqlin Mondal — PHP Laravel Developer",
   description:
-    "Shaqlin Mondal is a PHP Laravel developer in Kolkata. Laravel, MySQL, Tailwind, WooCommerce, and Razorpay. Live e-commerce stores and school portals.",
+    "Shaqlin Mondal is a PHP Laravel developer in Kolkata. Laravel, React, MySQL, REST APIs, and Razorpay. Admin panels, SaaS products, and company websites.",
 };
 
 export const viewport: Viewport = {

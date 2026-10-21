@@ -135,7 +135,11 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
             sizes="(min-width: 768px) 544px, 100vw"
             className="object-cover object-top"
           />
-        ) : null}
+        ) : (
+          <p className="absolute inset-0 grid place-items-center px-6 text-center text-[clamp(1.5rem,2.2vw,2.25rem)] leading-tight font-semibold tracking-[-0.03em]">
+            {project.name}
+          </p>
+        )}
       </div>
       <div className="mt-4 flex items-start justify-between gap-4">
         <div className="min-w-0">
