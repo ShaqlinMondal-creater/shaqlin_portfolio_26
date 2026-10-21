@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shaqlin Mondal — Full Stack Developer",
+  title: "Shaqlin Mondal — PHP Laravel Developer",
   description:
-    "Shaqlin Mondal is a mid-senior PHP full stack developer in Kolkata. Laravel, MySQL, Tailwind, and WooCommerce. Twelve live projects.",
+    "Shaqlin Mondal is a PHP Laravel developer in Kolkata. Laravel, MySQL, Tailwind, WooCommerce, and Razorpay. Live e-commerce stores and school portals.",
 };
 
 export const viewport: Viewport = {
