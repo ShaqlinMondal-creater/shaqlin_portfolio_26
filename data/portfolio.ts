@@ -9,7 +9,7 @@ export const profile = {
   phone: "+91 8597148785",
   phoneHref: "tel:+918597148785",
   years: "2.5+",
-  cv: "https://shaqlinmondal-creater.github.io/Portfolio-Shaqlin/Resume_2026.pdf",
+  cv: "/Shaqlin_Mondal_Resume.pdf",
   github: "https://github.com/ShaqlinMondal-creater",
   linkedin: "https://www.linkedin.com/in/shaqlin2021",
   instagram: "https://www.instagram.com/shaqlin_/",
@@ -91,7 +91,7 @@ export const capabilities = [
 export const marqueeWords = ["Laravel", "PHP", "MySQL", "Tailwind CSS", "WooCommerce", "REST APIs", "Razorpay"];
 
 export const stats = [
-  { value: 12, decimals: 0, suffix: "", label: "Live sites" },
+  { value: 12, decimals: 0, suffix: "", label: "Sites built" },
   { value: 2.5, decimals: 1, suffix: "+", label: "Years shipping" },
   { value: 3, decimals: 0, suffix: "", label: "Companies" },
 ];

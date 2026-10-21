@@ -59,11 +59,11 @@ export function Work() {
               id="work-title"
               className="mt-4 text-[clamp(2.2rem,4.6vw,4.2rem)] leading-[1] font-semibold tracking-[-0.04em]"
             >
-              Twelve sites, <span className="text-white/40">all in production.</span>
+              Twelve sites <span className="text-white/40">built.</span>
             </h2>
           </div>
           <p className="hidden max-w-[17rem] text-sm leading-relaxed text-white/55 md:block">
-            Stores, portals, and company sites for businesses across India. Every one of them is live.
+            Stores, portals, and company sites for businesses across India.
           </p>
         </div>
 
@@ -108,8 +108,9 @@ export function Work() {
 }
 
 function WorkCard({ project, index }: { project: Project; index: number }) {
-  return (
-    <a href={project.url} target="_blank" rel="noreferrer" className="group block">
+  const offline = "offline" in project && project.offline === true;
+  const body = (
+    <>
       <div className="flex items-center justify-between gap-4 font-mono text-[11px] tracking-[0.14em] text-white/45 uppercase">
         <span>{String(index + 1).padStart(2, "0")}</span>
         <span className="flex items-center gap-2">
@@ -117,7 +118,11 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
           {categoryLabels[project.type]}
         </span>
       </div>
-      <div className="relative mt-3 aspect-[16/7] overflow-hidden rounded-2xl border border-white/10 bg-shot transition duration-500 group-hover:-translate-y-1 group-hover:border-white/30">
+      <div
+        className={`relative mt-3 aspect-[16/7] overflow-hidden rounded-2xl border border-white/10 bg-shot ${
+          offline ? "" : "transition duration-500 group-hover:-translate-y-1 group-hover:border-white/30"
+        }`}
+      >
         <Image
           src={project.image}
           alt={`${project.name} homepage`}
@@ -131,9 +136,13 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
           <h3 className="text-xl font-semibold tracking-[-0.02em] md:text-2xl">{project.name}</h3>
           <p className="mt-1 font-mono text-xs text-white/45">{domainOf(project.url)}</p>
         </div>
-        <span className="shrink-0 rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/80 transition group-hover:bg-white group-hover:text-ink">
-          Visit <span aria-hidden>↗</span>
-        </span>
+        {offline ? (
+          <span className="shrink-0 rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/80">Offline</span>
+        ) : (
+          <span className="shrink-0 rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/80 transition group-hover:bg-white group-hover:text-ink">
+            Visit <span aria-hidden>↗</span>
+          </span>
+        )}
       </div>
       <p className="mt-3 text-sm leading-relaxed text-white/60">{project.description}</p>
       <ul className="mt-3 flex flex-wrap gap-1.5">
@@ -143,6 +152,16 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
           </li>
         ))}
       </ul>
+    </>
+  );
+
+  if (offline) {
+    return <div className="block">{body}</div>;
+  }
+
+  return (
+    <a href={project.url} target="_blank" rel="noreferrer" className="group block">
+      {body}
     </a>
   );
 }
