@@ -154,7 +154,7 @@
       "name": "Smart Quote",
       "description": "Personal SaaS: quotation management with admin and seller panels, subscription-based access, and Razorpay. Each seller manages their own products, customers, and quotations.",
       "tags": ["React", "Laravel", "MySQL", "Razorpay"],
-      "url": "https://smartquote-pi.vercel.app",
+      "url": "https://smart-quote-three.vercel.app",
       "image": "/projects/smartquote.webp"
     },
     {

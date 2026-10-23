@@ -26,7 +26,7 @@ export const liveSites = [
   { name: "Saifee School", domain: "saifeeschool.in", url: "https://www.saifeeschool.in", stack: "Laravel · MySQL" },
   { name: "Haneri", domain: "haneri.com", url: "https://haneri.com", stack: "Laravel · Razorpay" },
   { name: "Stockout", domain: "stockoutindia.com", url: "https://stockoutindia.com", stack: "Laravel · REST API" },
-  { name: "Smart Quote", domain: "smartquote-pi.vercel.app", url: "https://smartquote-pi.vercel.app", stack: "React · Laravel" },
+  { name: "Smart Quote", domain: "smart-quote-three.vercel.app", url: "https://smart-quote-three.vercel.app", stack: "React · Laravel" },
   { name: "TBL Industrial", domain: "tblindustrial.com", url: "https://tblindustrial.com", stack: "PHP" },
   { name: "Safe Technical India", domain: "safetechnicalindia.in", url: "https://www.safetechnicalindia.in", stack: "WordPress" },
 ];
